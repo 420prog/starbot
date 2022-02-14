@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+	<title> Moje Hobby </title>
+	<meta name="description" content="Jest to strona o grach komputerowych"/>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" href="img/hobby.jpg">	
+	<link href="jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet" type="text/css"/>
+	<script type="text/javascript" src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+	<script type="text/javascript" src="jquery-ui-1.12.1/jquery-ui.js"></script>
+	
+	<script>
+	  $( function() {
+		$( document ).tooltip({
+		  items: "img, [title]",
+		  content: function() {
+			var element = $( this );
+			if ( element.is( "[title]" ) ) {
+			  return element.attr( "title" );
+			}
+			if ( element.is( "img" ) ) {
+			  return element.attr( "alt" );
+			}
+		  }
+		});
+	  } );
+	</script>
+</head>
+
+<body>
+
+	<div id="kontener">
+		<div id="logo">
+		<h1>StarBOT</h1>
+		</div>
+		
+		<nav id="menu">
+		<ul>
+			<li><a href="index.html">Uniwersalny bot discord</a></li>
+			<li><a href="index2.html">Zaproś na serwer</a> 
+				<ul>
+				<li> <a href="index3.html"Dlaczego StarBOT?</a> </li> 
+				<li> <a href="index4.html">Spis Komend</a> </li> 
+				 </ul>
+				
+			</li>
+			<li><a href="index5.html">Lista Pomocników</a> 
+			</li>
+			<li><a href="index6.html">Kontakt discord</a></li>
+			<li><a href="galeria.php">logo</a></li>
+		</ul>
+		
+		</nav>
+		
+		<div id="zawartosc"> 
+		<h1 class="center">Gry Komputerowe<br/> </h1>
+
+		<p>StarBOT posiada wiele pożytecznych komend jak i funkcji, możesz się nim bezproblemowo pobawić oraz przetestować dzięki zaproszeniu bota na swój serwer discord.<p>
+		<p>Jest to strażnik czatu tekstowych, puszcza wybrane przez ciebie utwory z serwisu YouTube, to nie wszystko...</p> 
+		
+		<script type="text/javascript">
+			let paragraf = document.createElement("p");
+			let tekst = document.createTextNode("Życzę miłej lektury ;)");
+			paragraf.appendChild(tekst);
+			document.getElementById("zawartosc").appendChild(paragraf);
+		</script>
+
+		<script>
+			var zdjecie = new Image(50,50);
+			var box = document.getElementById("zawartosc");
+			zdjecie.onload = function() {
+			  box.appendChild(zdjecie);
+			}
+			zdjecie.src = "img/okejka.jpg";
+		</script>
+		
+		</div>
+		
+		
+		<div id="stopka">
+		Autor: Damian (discord: TheOnlyBen#0001) 
+		
+		</div>
+
+
+
+	</div>
+</body>
+</html>
