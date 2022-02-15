@@ -1,42 +1,80 @@
-<!DOCTYPE html>
-<html lang="pl-PL">
+<!DOCTYPE HTML>
+<html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glass UI!</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+	<meta charset="utf-8" />
+	<title> Strona Główna </title>
+	<meta name="description" content="Strefa Kodowania"/>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" href="s-removehb-preview.jpg">	
+	<link href="jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet" type="text/css"/>
+	<script type="text/javascript" src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+	<script type="text/javascript" src="jquery-ui-1.12.1/jquery-ui.js"></script>
+	
+	<script>
+	  $( function() {
+		$( document ).tooltip({
+		  items: "img, [title]",
+		  content: function() {
+			var element = $( this );
+			if ( element.is( "[title]" ) ) {
+			  return element.attr( "title" );
+			}
+			if ( element.is( "img" ) ) {
+			  return element.attr( "alt" );
+			}
+		  }
+		});
+	  } );
+	</script>
 </head>
+
 <body>
-    <div class="bg">
-        <img src="./img/button.png" alt="" class="bg__img bg__img--button">
-        <img src="./img/dots.png" alt="" class="bg__img bg__img--dots">
-        <img src="./img/logo-question-mark.png" alt="" class="bg__img bg__img--logo">
-    </div>
-    <div class="container">
-        <div class="logo">
-            <img src="./img/logo-question-mark.png" alt="">
-        </div>
-        <header>
-            <h1>Zaczynamy programować!</h1>
-            <p>Całoroczny plan nauki dla stawiających pierwsze kroki w programowaniu od twórców kanału YouTube 
-                <a href="https://jakzaczacprogramowac.pl">
-                    Jak zacząć programować?
-                </a>
-            </p>
-        </header>
-        <main>
-            <section>
-                </div>
-            </section>
-            <section>
+
+	<div id="kontener">
+		<div id="logo">
+		<h1>StarBOT</h1>
+		</div>
+		
+		<nav id="menu">
+		<ul>
+			<li><a href="index.html">Glowna</a></li>
+            <li><a href="https://discord.gg/2WrQzYGeJG">Discord</a></li>
+		</ul>
+		
+		</nav>
+		
+		<div id="zawartosc"> 
+
                 <p>Chcesz postawić pierwsze kroki w programowaniu?</p>
                 <p>Umiesz już trochę, ale ogrom wiedzy do przyswojenia Cię przytłacza? Potrzebujesz planu nauki?</p>
                 <p>Dołącz do naszego discorda, aby szybko i skutecznie nauczyć się wiele języków kodowania..</p>
                 <p>Pokażemy Ci czego warto się uczyć!</p>
-            </section>
-        </main>
-    </div>
+		
+		<script type="text/javascript">
+			let paragraf = document.createElement("p");
+			let tekst = document.createTextNode("");
+			paragraf.appendChild(tekst);
+			document.getElementById("zawartosc").appendChild(paragraf);
+		</script>
+
+		<script>
+			var zdjecie = new Image(50,50);
+			var box = document.getElementById("zawartosc");
+			zdjecie.onload = function() {
+			  box.appendChild(zdjecie);
+			}
+			zdjecie.src = "img/okejka.jpg";
+		</script>
+		
+		</div>
+		
+		
+		<div id="stopka">
+		
+		</div>
+
+
+
+	</div>
 </body>
 </html>
